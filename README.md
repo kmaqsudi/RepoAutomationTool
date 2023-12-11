@@ -29,7 +29,7 @@ This script automates the process of initializing a local project directory as a
 1. Download the script to your project directory.
 2. Make the script executable:
    ```bash
-   chmod +x setup_git_repo.sh
+   chmod +x create-github-repo-from-local-dir.sh
    ```
 3. Ensure that your GitHub username and personal access token are set as environment variables:
    ```bash
@@ -42,7 +42,7 @@ This script automates the process of initializing a local project directory as a
 1. Navigate to your project directory in the terminal.
 2. Run the script:
    ```bash
-   ./setup_git_repo.sh
+   ./create-github-repo-from-local-dir.sh
    ```
 3. Follow the interactive prompts to specify whether the GitHub repository should be public or private.
 
