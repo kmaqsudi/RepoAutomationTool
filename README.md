@@ -18,11 +18,6 @@ This script automates the process of initializing a local project directory as a
 - Git installed on your macOS.
 - A Personal Access Token (PAT) from GitHub with the necessary scopes.
 - `GITHUB_TOKEN` and `GITHUB_USERNAME` set as environment variables.
-```bash
-   # add the following lines to your .bash_profile or .zprofile
-   export GITHUB_USERNAME="user@gmail.com"
-   export GITHUB_TOKEN="github-token-generated-with-correct-scopes"
-   ```
 
 ## Installation
 
