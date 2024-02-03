@@ -30,11 +30,11 @@ This script automates the process of initializing a local project directory as a
 
 ## Features
 
-- Initializes a local Git repository.
-- Creates a new repository on GitHub (public or private as per user choice).
-- Pushes the local repository to the newly created GitHub repository.
-- Simple and interactive user prompts.
-- Error handling for common issues.
+- Initializes a local Git repository
+- Creates a new repository on GitHub (public or private as per user choice)
+- Pushes the local repository to the newly created GitHub repository
+- Simple and interactive user prompts
+- Error handling for common issues
 
 ## Prerequisites
 
