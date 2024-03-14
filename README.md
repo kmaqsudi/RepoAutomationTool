@@ -43,7 +43,18 @@ This script automates the process of initializing a local project directory as a
 - `GITHUB_TOKEN` and `GITHUB_USERNAME` set as environment variables.
 
 ## Installation
+### If running python version (recommended)
 
+1. Install required module
+   ```pip install requests```
+   
+2. Change to your project directory that you would like to create a GitHub repo from and run the script. 
+   ```e.g. $ cd /path/to/project/dir```
+   
+   ```e.g. $ python /path/to/create-github-repo-from-local-dir.py .```
+   
+   
+### If running bash version
 1. Download the script to your project directory.
 2. Make the script executable:
    ```bash
