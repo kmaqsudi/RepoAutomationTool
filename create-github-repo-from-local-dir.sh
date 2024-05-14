@@ -4,18 +4,61 @@
 # creating a corresponding repository on GitHub, and pushing the local repository to GitHub.
 # Author: Khalid Maqsudi
 # Date: 12-11-2023
+# v2 error handling added:  05-14-2024
 
+# Function to check if a command exists and prompt for installation if missing
+check_dependency() {
+    local cmd=$1
+    if ! command -v "$cmd" > /dev/null; then
+        echo "Error: $cmd is not installed."
+        while true; do
+            read -p "Do you want to install $cmd? (y/n): " yn
+            case $yn in
+                [Yy]* )
+                    if [ "$(uname)" == "Darwin" ]; then
+                        # macOS
+                        if ! command -v brew > /dev/null; then
+                            echo "Homebrew is not installed. Installing Homebrew first..."
+                            /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+                        fi
+                        brew install "$cmd"
+                    elif [ -f /etc/debian_version ]; then
+                        # Debian-based system
+                        sudo apt-get update
+                        sudo apt-get install -y "$cmd"
+                    elif [ -f /etc/redhat-release ]; then
+                        # RedHat-based system
+                        sudo yum install -y "$cmd"
+                    else
+                        echo "Unsupported OS. Please install $cmd manually."
+                        exit 1
+                    fi
+                    break;;
+                [Nn]* ) echo "$cmd is required. Exiting."; exit 1;;
+                * ) echo "Please answer yes (y) or no (n).";;
+            esac
+        done
+    fi
+}
 
-# Function to check if necessary environment variables are set
+# Function to check if necessary environment variables are set and prompt for input if missing
 check_env_variables() {
     if [ -z "$GITHUB_TOKEN" ]; then
-        echo "Error: GitHub Personal Access Token not set. Please set the GITHUB_TOKEN environment variable."
-        exit 1
+        read -p "GitHub Personal Access Token is not set. Please enter your GitHub Personal Access Token: " GITHUB_TOKEN
+        if [ -z "$GITHUB_TOKEN" ]; then
+            echo "GitHub Personal Access Token is required. Exiting."
+            exit 1
+        fi
+        export GITHUB_TOKEN
     fi
 
     if [ -z "$GITHUB_USERNAME" ]; then
-        echo "Error: GitHub Username not set. Please set the GITHUB_USERNAME environment variable."
-        exit 1
+        read -p "GitHub Username is not set. Please enter your GitHub Username: " GITHUB_USERNAME
+        if [ -z "$GITHUB_USERNAME" ]; then
+            echo "GitHub Username is required. Exiting."
+            exit 1
+        fi
+        export GITHUB_USERNAME
     fi
 }
 
@@ -77,6 +120,10 @@ initialize_and_push() {
 }
 
 # Main script execution starts here
+
+# Check if necessary dependencies are installed
+check_dependency "curl"
+check_dependency "jq"
 
 # Check if necessary environment variables are set
 check_env_variables
