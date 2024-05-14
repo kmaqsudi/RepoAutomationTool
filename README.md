@@ -15,9 +15,6 @@
     <img src="https://img.shields.io/github/languages/count/kmaqsudi/RepoAutomationTool?style=flat&color=0080ff" alt="repo-language-count">
 </p>
 <p align="center">
-        <em>Developed with the software and tools below.</em>
-</p>
-<p align="center">
     <img src="https://img.shields.io/badge/GNU%20Bash-4EAA25.svg?style=flat&logo=GNU-Bash&logoColor=white" alt="GNU%20Bash">
     <img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
 </p>
