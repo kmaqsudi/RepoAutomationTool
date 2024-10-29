@@ -1,6 +1,68 @@
+<a name="readme-top"></a>
+<!--
+*** Thanks for using Document My Project. (https://github.com/luisvent/document_my_project) 
+*** If you have a suggestion that would make this better, please fork  
+*** the repo and create a pull request or simply open an issue.
+*** Don't forget to give the project a star!
+-->
 
+
+<div align="center">
+
+<a href="" target="_blank" title="Go to  website">
+<img width="196px" alt="GitHub Repository Automation Setup" src="https://raw.githubusercontent.com/kmaqsudi/RepoAutomationTool/master/repoautomation-logo.jpeg">
+</a>
+
+
+# GitHub Repository Automation Setup
+
+Automate repo setup and push with ease!
+
+</div>
+
+
+<div align="center"><h4><a href="#-table-of-contents">️Table of Contents</a> • <a href="#about-the-project">About the Project</a> • <a href="#showcase">Showcase</a> • <a href="#stack-tech">Stack Tech</a> • <a href="#-setup">️Setup</a> • <a href="#acknowledgements">Acknowledgements</a> • <a href="#about-the-author">About the Author</a> • <a href="#license">License</a></h4></div>
+
+<p align="center"><img src="https://raw.githubusercontent.com/kmaqsudi/RepoAutomationTool/master/repo-auto-create.webp" alt="Main Image"/></p>
+
+## ️Table of Contents
+ <details>
+<summary>Open Contents</summary>
+
+- [GitHub Repository Automation Setup](#github-repository-automation-setup)
+  - [About the Project](#about-the-project)
+  - [Showcase](#showcase)
+  - [Stack Tech](#stack-tech)
+  - [️Setup](#setup)
+    - [Installation](#installation)
+    - [Python Version](#python-version)
+  - [Acknowledgements](#acknowledgements)
+  - [About the Author](#about-the-author)
+  - [License](#license)
+</details>
+
+## About the Project
+
+Streamline your GitHub project setup with ease! This tool automates the initialization of a local Git repository, seamlessly creates a corresponding GitHub repository, and pushes your code with minimal interaction. Perfect for developers looking to save time and standardize their repository creation process.
+
+
+
+## Showcase
+
+ <center>
+
+<table>
+<tr>
+<td><a href="https://raw.githubusercontent.com/kmaqsudi/RepoAutomationTool/master/repoauto-image.jpg"><img width="320" src="https://raw.githubusercontent.com/kmaqsudi/RepoAutomationTool/master/repoauto-image.jpg"></a></td>
+<td></td>
+</tr>
+</table>
+
+</center>
+
+## Stack Tech
 <p align="center">
-  <img src="repoautomation-logo.jpeg" width="100" />
+  <img src="https://raw.githubusercontent.com/kmaqsudi/RepoAutomationTool/master/repoautomation-logo.jpeg" width="100" />
 </p>
 <p align="center">
     <h1 align="center">GitHub Repository Automation Setup</h1>
@@ -20,28 +82,14 @@
 </p>
 <hr>
 
-## Introduction
 
-This script automates the process of initializing a local project directory as a Git repository, creating a corresponding repository on GitHub, and pushing the local repository to GitHub. It's designed to be platform-agnostic, running on macOS, Debian-based, and RedHat-based systems, and uses environment variables for GitHub authentication, making the setup process seamless and efficient.
+## ️Setup
 
-## Features
+### Installation
 
-- Initializes a local Git repository
-- Creates a new repository on GitHub (public or private as per user choice)
-- Pushes the local repository to the newly created GitHub repository
-- Simple and interactive user prompts
-- Error handling for common issues
-- Checks and installs necessary dependencies programmatically
+To install this project, follow these steps:
 
-## Prerequisites
-
-- Git installed on your system
-- A Personal Access Token (PAT) from GitHub with the necessary scopes
-- `GITHUB_TOKEN` and `GITHUB_USERNAME` set as environment variables (or entered during script execution)
-
-## Installation
-
-### Bash Version
+1. ### Bash Version
 
 1. Download the script to your project directory.
 2. Make the script executable:
@@ -60,38 +108,30 @@ This script automates the process of initializing a local project directory as a
    ```
 3. Download the script to your project directory.
 
-## Usage
 
-### Bash Version
 
-1. Navigate to your project directory in the terminal.
-2. Run the script:
-   ```bash
-   ./create-github-repo-from-local-dir.sh
-   ```
-3. Follow the interactive prompts to:
-   - Set your GitHub Personal Access Token and Username if they are not already set as environment variables.
-   - Specify whether the GitHub repository should be public or private.
 
-### Python Version
 
-1. Navigate to your project directory in the terminal.
-2. Run the script:
-   ```bash
-   python create-github-repo-from-local-dir.py
-   ```
-3. Follow the interactive prompts to:
-   - Enter your GitHub Personal Access Token and Username if they are not already set as environment variables.
-   - Specify whether the GitHub repository should be public or private.
+## Acknowledgements
 
-## Contributing
+- [Yaseen Maqsudi]() - https://github.com/ymaqsudi
 
-Contributions to improve this script are welcome. Please feel free to fork the repository, make changes, and submit a pull request.
+
+
+## About the Author
+
+**Khalid**
+
+This project was created by Khalid. Connect with me on [GitHub](https://github.com/kmaqsudi)  to learn more about my projects and professional background.
+
 
 ## License
 
-This script is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+<p align="right"><a href="#readme-top">(Back to top)</a></p>
 
 ---
+ <div align="center">Built with ❤️ with <a href="https://github.com/luisvent/document_my_project">Document My Project</a></div>
 
-Enjoy using the script! For any issues or suggestions, please open an issue in this repository.
